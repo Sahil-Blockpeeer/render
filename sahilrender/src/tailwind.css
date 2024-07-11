@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("https://ui.tradetrust.io/static/fonts/GilroyMedium/font.woff2") format("woff2"),
+    url("https://ui.tradetrust.io/static/fonts/GilroyMedium/font.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("https://ui.tradetrust.io/static/fonts/GilroyBold/font.woff2") format("woff2"),
+    url("https://ui.tradetrust.io/static/fonts/GilroyBold/font.woff") format("woff");
+}
+
+@tailwind base;
+
+@layer base {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+
+  input[disabled] {
+    @apply cursor-not-allowed;
+  }
+
+  a {
+    @apply transition-colors;
+    @apply duration-200;
+    @apply ease-out;
+    @apply text-cloud-500;
+  }
+
+  a:hover {
+    @apply text-cerulean-500;
+  }
+
+  pre {
+    @apply whitespace-pre-wrap;
+  }
+}
+
+@tailwind components;
+
+@layer components {
+  .terms {
+    @apply text-xs;
+  }
+
+  .terms h1,
+  .terms h2 {
+    @apply text-xs;
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  .font-ubuntu-normal {
+    font-family: "Ubuntu";
+  }
+
+  .font-gilroy-normal {
+    font-family: "Gilroy-Medium";
+  }
+
+  .font-gilroy-bold {
+    font-family: "Gilroy-Bold";
+  }
+}
